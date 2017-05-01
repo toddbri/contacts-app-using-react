@@ -1,0 +1,179 @@
+/** {border: 1px solid red;}*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: rgb(188, 237, 252);
+
+}
+.title {
+  font-size: 30px;
+}
+.container {
+  text-align: center;
+}
+
+.outerContainer {
+  background-color: rgb(188, 237, 252);
+  /*height: 100vh;*/
+  text-align: center;
+  height: 100%;
+}
+
+.modal {
+  /*background-color: yellow;*/
+  opacity: .3;
+}
+.modal-dialog {
+  /*background-color: pink;*/
+  margin: 20% auto;
+}
+
+.modal-body{
+    /*background-color: orange;*/
+    width: 60%;
+    height: 400px;
+    margin: auto;
+}
+
+.modal-content {
+  /*background-color: red;*/
+  padding: 30px;
+  text-align: left;
+  opacity: 1;
+}
+/*.formContainer {
+  width: 65%;
+  margin: auto;
+  padding-top: 30%;
+  text-align: left;
+}*/
+
+.contacts{
+  text-align: left;
+  width: 65%;
+  margin: auto;
+}
+.editIcon{
+  height: 15px;
+  margin-left: 3px;
+  margin-top: -15px;
+}
+.addButton, .saveEditButton, .cancelEditButton{
+  margin-top: 15px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.addEntry,  .displayAllContacts, .displayOnlyFavorites{
+  margin-top: 15px;
+  border-radius: 5px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.favoriteStar {
+  height: 20px;
+  margin-left: 6px;
+
+}
+
+.contacts .contactBoxContainer:nth-child(odd){
+  background-color: rgb(134, 173, 213);
+  border-radius: 8px;
+}
+
+.contacts .contactBoxContainer:nth-child(even){
+  background-color: #FFFFFF;
+  border-radius: 8px;
+}
+/*label {
+  margin-top: 5px;
+}*/
+ul {
+  padding-left:10px;
+  float:left;
+}
+.edit {
+  width:4%;
+  float:left;
+  cursor: pointer;
+
+}
+
+#radioButtonsLabel {
+  margin-right: 5px;
+}
+.contactBox{
+    border: 2px solid black;
+    margin-bottom: 3px;
+    padding-top: 5px;
+    border-radius: 8px;
+    height: 75px;
+
+
+}
+.details {
+  width:90%;
+  display:inline-block;
+
+}
+li {
+  list-style-type: none;
+}
+
+
+
+
+.deleteButton {
+  width: 2%;
+  height: 100%;
+  font-weight: bold;
+  color: black;
+  /*display: inline-block;*/
+  float:right;
+  text-align: right;
+  cursor: pointer;
+  margin-top: -7px;
+  margin-right: 2px;
+}
+
+.kill-leave {
+  /*position:absolute;*/
+  /*transform: */
+  /*opacity: 1;*/
+}
+
+.slowKill-leave.slowKill-leave-active {
+  /*opacity: 0;*/
+  animation-name: throwAway;
+  animation-duration: 1s;
+  /*transition: opacity 3000ms ease-in;*/
+}
+
+.fastKill-leave.fastKill-leave-active {
+  
+}
+
+#trashcan {
+  position: fixed;
+  left: 5%;
+  bottom: 3vh;
+}
+
+@keyframes throwAway {
+
+  100% {
+    /*transform: perspective(350px) rotateX(90deg);*/
+    transform: scaleY(0);
+  }
+
+  /*50% {
+    background-color: 'pink';
+  }
+  100% {
+    background-color: 'yellow';
+  }*/
+
+}
