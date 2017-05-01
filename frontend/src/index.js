@@ -4,7 +4,7 @@ import './index.css';
 import TransitionGroup from 'react-transition-group/CSSTransitionGroup';
 const $ = window.jQuery;
 // let hostname = 'http://localhost:5004';
-hostname = "http://contacts.briley.org";
+hostname = "http://contactsapi.briley.org";
 class ContactList extends React.Component {
   constructor(){
     super();
