@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import TransitionGroup from 'react-transition-group/CSSTransitionGroup';
 const $ = window.jQuery;
-
+// let hostname = 'http://localhost:5004';
+hostname = "http://contacts.briley.org";
 class ContactList extends React.Component {
   constructor(){
     super();
@@ -24,7 +25,7 @@ class ContactList extends React.Component {
   }
 
   componentDidMount(){
-    $.get('http://localhost:5004/api/contacts')
+    $.get(hostname+'/api/contacts')
     .then(contacts => {
       this.setState({contacts:contacts});
     })
@@ -39,7 +40,7 @@ class ContactList extends React.Component {
         email: this.state.email, type:this.state.type, favorite: this.state.favorite};
       $.ajax({
         method: 'POST',
-        url: 'http://localhost:5004/api/contacts',
+        url: hostname + '/api/contacts',
         data: JSON.stringify(newContact),
         contentType: 'application/json'
       })
@@ -79,7 +80,7 @@ class ContactList extends React.Component {
     console.log("deleting contact with db id of: " + idx);
     $.ajax({
       method: 'DELETE',
-      url: 'http://localhost:5004/api/contacts/'+idx
+      url: hostname + '/api/contacts/'+idx
     })
     .then( value => console.log("delete api return value: " + value))
     .then( value => {
@@ -111,7 +112,7 @@ class ContactList extends React.Component {
     console.log(contactObject);
     $.ajax({
       method: 'PUT',
-      url: 'http://localhost:5004/api/contacts/'+idx,
+      url: hostname + '/api/contacts/'+idx,
       data: JSON.stringify(contactObject),
       contentType: 'application/json'
     })
